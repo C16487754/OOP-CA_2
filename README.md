@@ -11,11 +11,11 @@ left arrow: move left
 
 right arrow: move right
 
-#Team info
+# Team info
 Team name : Calvin <br />
 Team members : Calvin Ho<br />
 
-#Project description
+# Project description
 I used the eclipse ide to develop a game in java.<br />
 The game is a simple 2d platformer game. I used Jframe and Graphics2D to develop this game.<br />
 The game works by creating a player instance that can move using the arrow keys.<br />
@@ -34,6 +34,6 @@ Enemy: player will kill enemy the bottom of player collides with enemy. If left,
 Flag: The objective of the game. If the player collides with a flag it proceeds to the next level.<br />
 
 
-#Member contribution
+# Member contribution
 I worked as an individual on this project.
 
