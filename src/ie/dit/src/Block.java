@@ -1,28 +1,31 @@
 package ie.dit;
 
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Rectangle;
 
-public class Obsticle extends Rectangle{
+public class Block extends Rectangle{
 	
 	private static final long serialVersionUID = 1L;
 	public static final int blocksize = 32;
+
 	
-	public Obsticle(int x, int y)
+	public Block(int x, int y)
 	{
 		setBounds(x,y, blocksize, blocksize);
 	}
 
-	
-	public void draw(Graphics g)
+	//method to draw the block
+	public void draw(Graphics g, Image block)
 	{
-		g.fillRect(x, y, width, height);
+		g.drawImage(block, x, y, width, height, null);
 	}
 	
-	public Rectangle getBounds() {
+	//returns the shape of the block
+	public Rectangle getBounds()
+	{
 		return new Rectangle(x, y, blocksize, blocksize);
 	}
-	
+
 	
 }
-
