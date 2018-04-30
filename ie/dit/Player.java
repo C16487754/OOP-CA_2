@@ -1,4 +1,4 @@
-package gam;
+package ie.dit;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
