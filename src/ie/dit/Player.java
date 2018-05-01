@@ -32,7 +32,7 @@ public class Player {
 	}
 
 	//passing arraylists to method
-	public static void move(ArrayList<Block> block,ArrayList<Mblock> mblock, ArrayList<Obsticle> obsticle, ArrayList<Enemy> enemy,ArrayList<Flag> flag) throws IOException, InterruptedException {
+	public static void move(ArrayList<Block> block,ArrayList<Mblock> mblock, ArrayList<Obstacle> obstacle, ArrayList<Enemy> enemy,ArrayList<Flag> flag) throws IOException, InterruptedException {
 		
 		moving = false;
 		//when player reaches bottom 
@@ -84,7 +84,7 @@ public class Player {
 			falling = true;
 			collision(block);	
 			collision_mblock(mblock);
-			collision_obst(obsticle);
+			collision_obst(obstacle);
 			collision_enemy(enemy);
 			collision_flag(flag);
 	}
@@ -231,22 +231,22 @@ public class Player {
 	}
 	
 	//collision method for spikes
-	private static void collision_obst(ArrayList<Obsticle> obsticle) throws IOException, InterruptedException
+	private static void collision_obst(ArrayList<Obstacle> obstacle) throws IOException, InterruptedException
 	{
-		for(int i = 0; i< obsticle.size(); i++)
+		for(int i = 0; i< obstacle.size(); i++)
 		{
-			if (getBoundsRight().intersects(Game.obsticle.get(i).getBounds()))
+			if (getBoundsRight().intersects(Game.obstacle.get(i).getBounds()))
 			{
-				x = Game.obsticle.get(i).x - width;
+				x = Game.obstacle.get(i).x - width;
 				Game.gameOver();	
 			}
 			
-			if (getBoundsLeft().intersects(Game.obsticle.get(i).getBounds()))
+			if (getBoundsLeft().intersects(Game.obstacle.get(i).getBounds()))
 			{
-				x = Game.obsticle.get(i).x + width;
+				x = Game.obstacle.get(i).x + width;
 				Game.gameOver();
 			}
-			if ((getBounds().intersects(Game.obsticle.get(i).getBounds())))
+			if ((getBounds().intersects(Game.obstacle.get(i).getBounds())))
 			{
 				falling = false;
 				jumping = false;

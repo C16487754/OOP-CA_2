@@ -4,12 +4,12 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
 
-public class Obsticle extends Rectangle{
+public class Obstacle extends Rectangle{
 	
 	private static final long serialVersionUID = 1L;
 	public static final int blocksize = 30;
 	
-	public Obsticle(int x, int y)
+	public Obstacle(int x, int y)
 	{
 		setBounds(x,y, blocksize, blocksize);
 	}

@@ -33,7 +33,7 @@ public class Game extends JPanel {
 	
 	//declaring arraylists
 	static ArrayList<Block> block = new ArrayList<Block>();
-	static ArrayList<Obsticle> obsticle = new ArrayList<Obsticle>();
+	static ArrayList<Obstacle> obstacle = new ArrayList<Obstacle>();
 	static ArrayList<Flag> flag = new ArrayList<Flag>();
 	static ArrayList<Enemy> enemy = new ArrayList<Enemy>();
 	static ArrayList<Mblock> mblock = new ArrayList<Mblock>();
@@ -61,7 +61,7 @@ public class Game extends JPanel {
 
 	private void move() throws IOException, InterruptedException
 	{
-		Player.move(block,mblock, obsticle, enemy, flag);
+		Player.move(block,mblock, obstacle, enemy, flag);
 	}
 	
 	//method to load images
@@ -128,9 +128,9 @@ public class Game extends JPanel {
 		}
 
 		//drawing spikes
-		for(int i = 0; i<obsticle.size(); i++)
+		for(int i = 0; i<obstacle.size(); i++)
 		{
-			obsticle.get(i).draw(g, spike);
+			obstacle.get(i).draw(g, spike);
 		}
 		
 		//drawing flags
@@ -198,7 +198,7 @@ public class Game extends JPanel {
 			System.exit(0);
 		}
 		block.clear();
-		obsticle.clear();
+		obstacle.clear();
 		flag.clear();
 		enemy.clear();
 		mblock.clear();
@@ -241,7 +241,7 @@ public class Game extends JPanel {
 				 }
 				 if(j=='2') 
 				 {
-					 obsticle.add(new Obsticle(w*32,(h*32)+4));
+					 obstacle.add(new Obstacle(w*32,(h*32)+4));
 				 }
 						 
 				 if(j=='3') 
